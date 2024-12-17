@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brimbolo Security</title>
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" href="Blue Flat Illustrative Minimal Web Security Technology Logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Blue Flat Illustrative Minimal Web Security Technology Logo.png" alt="Brimbolo Logo" class="logo me-2">
+        <span class="navbar-brand "><span class="badge bg-primary">Brimbolo</span> Security</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item fs-5 p-2">
+            <a class="nav-link" aria-current="page" href="index1.html" target="_self">Home</a>
+          </li>
+          <li class="nav-item fs-5 p-2">
+            <a class="nav-link " href="index2.html" target="_self">About</a>
+          </li>
+          <li class="nav-item fs-5 p-2">
+            <a class="nav-link active" href="#">Product</a>
+          </li>
+          <li class="nav-item fs-5 p-2">
+            <a class="nav-link" href="index4.html" target="_self">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1 class="text-capitalize text-center mt-4" style="font-size: 45px;">explore our products</h1>
+  <div class="container mt-4">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-icon">
+      <span class="input-group-text" id="search-icon">
+        <i class="fas fa-search"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row" id="productContainer">
+    </div>
+  </div>
+  <div class="footer" id="ft-1">
+    <p class="fs-5 fs-sm-6">© 2024 Berimbolo Security. All rights reserved. | Terms of Service | Privacy Policy</p>
+  </div>
+  </body>
+  <script>
+   const products = [
+    {
+      name: "Smart Security Camera",
+      description: "Advanced surveillance camera with motion detection and night vision.",
+      price: "$150",
+      image: "2008.i211.007.P.m004.c25.video surveillance security cameras realistic set-02.jpg"
+    },
+    {
+      name: "Home Alarm System",
+      description: "Comprehensive alarm system with remote control and emergency alerts.",
+      price: "$200",
+      image: "smoke-carbon-monoxide-alarm-isolated-white-background.jpg"
+    },
+    {
+      name: "Video Doorbell",
+      description: "High-definition video doorbell with real-time notifications and two-way audio.",
+      price: "$120",
+      image: "images1.jpeg"
+    },
+    {
+      name: "Motion Sensor Light",
+      description: "Outdoor motion sensor light with adjustable brightness and wide-angle detection.",
+      price: "$75",
+      image: "SL-5412-WH-D-removebg-preview.png"
+    },
+    {
+      name: "Biometric Door Lock",
+      description: "Secure fingerprint door lock with keypad and key override options.",
+      price: "$250",
+      image: "2101.i211.015_door_knobs_handles_realistic_composition_1.jpg"
+    },
+    {
+      name: "CCTV Monitoring Service",
+      description: "24/7 professional monitoring service for your CCTV system.",
+      price: "Subscription: $50/month",
+      image: "images111.jpeg"
+    } ,
+    {
+    name: "Access Control System",
+    description: "Advanced access management system for secure buildings.",
+    price: "$300",
+    image: "access-control-devices.jpg"
+  },
+  {
+    name: "Fire Alarm System",
+    description: "Reliable fire alarm system with instant alerts for maximum safety.",
+    price: "$180",
+    image: "codeapps_adobestock_562069694.webp"
+  },
+  {
+    name: "Security Patrol Drone",
+    description: "Autonomous drone for monitoring large areas efficiently.",
+    price: "$800",
+    image: "Hdd011d3bf68f4119a8425d693c25d9f6X.jpg_720x720q50.avif"
+  }
+  ];
+
+
+    const productContainer = document.getElementById("productContainer");
+
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "col-md-6 col-12 col-lg-4 mb-4";
+
+      card.innerHTML = `
+        <div class="card h-100 ">
+          <img src="${product.image}" class="card-img-top h-75" alt="${product.name}">
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="card-text text-primary"><strong>${product.price}</strong></p>
+            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+          </div>
+        </div>
+      `;
+
+      productContainer.appendChild(card);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
